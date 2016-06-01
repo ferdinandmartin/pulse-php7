@@ -1,46 +1,44 @@
-<?php
-session_start();
- 
-require 'Pulse/Pulse.php';
-
-/**
- * PULSE Framework 1.2.1 - Copyright (c) 2012-2016 Ferdinand Martin
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is furnished
- * to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */
-
-/**
- * @var registerAutoloader $loader
- */
-\Pulse\Pulse::registerAutoloader();
- 
-/**
- * @var APIcompilation $pulseAPI
- */
-$API = new \Pulse\Pulse();
-
-/**
- * @var Global Configuration $loadConfig
- */
-require \Pulse\Procedures::loadConfig();
-
-/**
- * @var API Routing loader $loadRouting
- */
-require \Pulse\Procedures::loadRouting();
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="<?=iasset('bootstrap.min.css')?>" rel="stylesheet">
+        <link rel="stylesheet" href="<?=iasset('styles.css')?>">
+        <title><?=$title?></title>
+        <link rel="icon" type="image/png" href="<?=iasset('pulseLogo.png')?>" />
+        <!-- Custom Fonts -->
+        <link href="<?=iasset('font-awesome.min.css')?>" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="<?=basePath()?>"><i class="fa fa-heartbeat"></i> PULSE Framework</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li<?php if(isActive()=='/'){ echo' class="active"'; } ?>><a href="<?=basePath()?>">Welcome</a></li>
+                <?php if(isActive()!='/configure'){ ?><li><a href="<?=path('adashboard')?>">Admin Dashboard</a></li><?php } ?>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+        <div class="container">
+            <div class="starter-template">
+                 <?php require_once $_SESSION['path.now'].'.php'; ?>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="<?=iasset('jquery.min.js')?>"></script>
+        <script src="<?=iasset('bootstrap.min.js')?>"></script>
+    </body>
+</html>
