@@ -64,13 +64,13 @@ INSERT INTO `pulse_users` (`username`, `password`, `name`, `permissions`, `creat
 ('blog', '".md5('blog')."', 'Clean Blog', 1, '".date('Y-m-d')." 00:00:00', '0000-00-00 00:00:00', 'web', '0000-00-00 00:00:00');
 
 INSERT INTO `posts_pos` (`id`, `title`, `subtitle`, `content`, `url`, `image`, `seo_title`, `seo_description`, `seo_h1`, `seo_h2`, `creation_date`) VALUES
-(1, 'Man must explore, and this is exploration at its greatest', 'Problems look mighty small from 150 miles up', '<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+(1, 'Man must explore, and this is exploration at its greatest', 'Problems look mighty small from 150 miles up', '<p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman\'s earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there\'s no turning back from science. The early warnings about technological dangers also come from science.</p>
 
                     <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
 
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That\'s how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
 
                     <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>', 'man-must-explore', 'https://static.pexels.com/photos/105032/pexels-photo-105032.jpeg', 'The Final Frontier', 'The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.', 'Man must explore, and this is exploration at its greatest', 'Problems look mighty small from 150 miles up', '".date('Y-m-d H:i:s')."');");
 $pulseUpdate->execute();
@@ -593,9 +593,10 @@ $API->get('/{permalink}',
         ));
         $post = $postsQ->fetchAll(PDO::FETCH_ASSOC);
         
-        $API->render('Default:home', array(
+        $API->render('Default:post', array(
             'title' => $post[0]['title'],
             'subtitle' => $post[0]['subtitle'],
+            'featuredImage' => $post[0]['image'],
             'content' => $post[0]['content'],
             'url' => $post[0]['url'],
             'image' => $post[0]['image'],
