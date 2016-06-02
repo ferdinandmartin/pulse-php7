@@ -10,4 +10,4 @@ This version includes a central panel to auto-generate entities, control forms a
 # Admin Dashboard login
 The path to admin dashboard is in admin/dashboard.
 Default login details for ADMIN privileges are admin:admin.
-To Ulient/Client privileges access use user:user.
+To User/Client privileges access use user:user.
