@@ -1,7 +1,7 @@
 <?php
 /**
  * WEB Invocation.
- * (c) Ferdinand Martin <info@pulseframework.com>
+ * (c) Ferdinand Martin <https://github.com/ferdinandmartin>
  *
  * WEB Invocation Procedure (Bootstrap)
  * This invocation generates:
