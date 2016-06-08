@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="<?=basePath()?>/Pulse/Internal/images/pulseLogo.png" />
 
-    <title>Signin in PULSE Central</title>
+    <title>Signin in PULSE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?=iasset('bootstrap.min.css')?>" rel="stylesheet">
