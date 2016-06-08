@@ -50,51 +50,10 @@
           <p><a class="btn btn-primary" href="<?=path('invoke')?>" role="button">Invoke API &raquo;</a></p>
         </div>
       </div>
-      <!-- START THE FEATURETTES -->
-
-      <!--<hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First. <span class="text-muted">Blow your mind.</span></h2>
-          <p class="lead">Be creative, design your app, PULSE Framework is all you need to make it real, develope 10 times faster, but, may I say <strong>design</strong> 10 times faster.</p>
-        </div>
-        <div class="col-md-5">
-            <div class="circle-icon"><i class="fa fa-heartbeat"></i></div>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Database and views. <span class="text-muted">You've got the power.</span></h2>
-          <p class="lead">With <a href="<?=path('atables')?>">Tables</a> tools you have full control of your database, forms and actions in your APP, create relations and triggers.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <div class="circle-icon"><i class="fa fa-database"></i></div>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <div class="circle-icon"><i class="fa fa-flask"></i></div>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">-->
-
-      <!-- /END THE FEATURETTES -->
 
 
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2015 PULSE Framework Version.<?=Pulse\Pulse::VERSION?> &middot;</p>
+        <p>&copy; 2014-2016 PULSE Framework Version.<?=Pulse\Pulse::VERSION?> &middot;</p>
       </footer>
