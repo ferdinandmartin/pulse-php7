@@ -1,7 +1,7 @@
 <?php
 /**
  * Blog Clean Invocation.
- * (c) Ferdinand Martin <info@pulseframework.com>
+ * (c) Ferdinand Martin <https://github.com/ferdinandmartin>
  *
  * A Clean Blog Theme by Start Bootstrap (Bootstrap)
  * This invocation generates:
