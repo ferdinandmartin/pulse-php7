@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?=$title?> - Pulse Framework Admin</title>
+    <title><?=$title?> - Pulse PHP7</title>
     <link rel="icon" type="image/png" href="<?=basePath()?>/Pulse/Internal/images/pulseLogo.png" />
     <!-- Bootstrap core CSS -->
     <link href="<?=iasset('bootstrap.min.css')?>" rel="stylesheet">
