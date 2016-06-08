@@ -9,7 +9,6 @@
 
         <h3>Twitter</h3>
         <p>
-            Follow <a href="http://www.twitter.com/pulseframework" target="_blank">pulseframework</a> on Twitter to receive the very latest news
-            and updates about the framework.
+            Visit <a href="https://github.com/ferdinandmartin/pulse-php7" target="_blank">Pulse PHP7 GitHub</a> site to get in touch, watch it, star it and fork it!.
         </p>
     </section>
