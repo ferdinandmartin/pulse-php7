@@ -16,7 +16,7 @@
     <div class="col-lg-12">
         <div class="alert alert-info alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <i class="fa fa-info-circle"></i>  <strong>Like PULSE Framework?</strong> Feedback us in <a href="twitter.com/pulseframework" class="alert-link">twitter</a> and get it connected!
+            <i class="fa fa-info-circle"></i>  <strong>Like PULSE Framework?</strong> Feedback us in <a href="https://github.com/ferdinandmartin" class="alert-link">GitHub</a> and get it connected!
         </div>
     </div>
 </div>
@@ -48,5 +48,5 @@
 <hr>
 
 <footer>
-  <p>&copy; 2015 PULSE Framework Version.<?=Pulse\Pulse::VERSION?></p>
+  <p>&copy; 2014-2016 PULSE Framework Version.<?=Pulse\Pulse::VERSION?></p>
 </footer>
