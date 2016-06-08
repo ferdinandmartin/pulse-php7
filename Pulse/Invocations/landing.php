@@ -1,7 +1,7 @@
 <?php
 /**
  * LANDING Agency Invocation.
- * (c) Ferdinand Martin <info@pulseframework.com>
+ * (c) Ferdinand Martin <https://github.com/ferdinandmartin>
  *
  * LANDING Agency Procedure (Bootstrap)
  * This invocation generates:
