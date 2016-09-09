@@ -10,4 +10,5 @@ This version includes a development toolkit to generate entities, control forms 
 The path to DevToolkit is in admin/dashboard.
 
 Default login details for ADMIN privileges are admin:admin.
+
 To User/Client privileges access use user:user.
