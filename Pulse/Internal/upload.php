@@ -20,16 +20,36 @@ $paths= [];
 $filenames = $images['name'];
 
 // loop and process files
-for($i=0; $i < count($filenames); $i++){
-    //$ext = explode('.', basename($filenames[$i]));
-    $target = $_POST['uploadfolder']."/" . $filenames;
-    if(move_uploaded_file($images['tmp_name'][$i], $target)) {
-        $success = true;
-        $paths[] = $target;
-    } else {
-        $success = false;
-        break;
-    }
+if(count($filenames)>1) {
+	for($i=0; $i < count($filenames); $i++){
+		//$ext = explode('.', basename($filenames[$i]));
+		$target = $_POST['uploadfolder']."/" . $filenames[$i];
+		//$target = "uploads/upl_" . $filenames ;
+		//if(move_uploaded_file($images['tmp_name'][$i], $target)) {
+		if(file_exists($images['tmp_name'][$i])){
+			$existe = "existe";
+		}
+		if(move_uploaded_file($images['tmp_name'][$i], $target)) {
+			$success = true;
+			$paths[] = $target;
+		} else {
+			$success = false;
+			break;
+		}
+	}
+} else {
+		$target = $_POST['uploadfolder']."/" . $filenames;
+		//$target = "uploads/upl_" . $filenames ;
+		//if(move_uploaded_file($images['tmp_name'][$i], $target)) {
+		if(file_exists($images['tmp_name'])){
+			$existe = "existe";
+		}
+		if(move_uploaded_file($images['tmp_name'], $target)) {
+			$success = true;
+			$paths[] = $target;
+		} else {
+			$success = false;
+		}
 }
 
 // check and process based on successful status 
@@ -46,7 +66,7 @@ if ($success === true) {
     // for example you can get the list of files uploaded this way
     // $output = ['uploaded' => $paths];
 } elseif ($success === false) {
-    $output = ['error'=>'Error while uploading images. Contact the system administrator '.$target];
+    $output = ['error'=>'Error while uploading images. Check permissions on /Pulse/uploads folder.'];
     // delete any uploaded files
     foreach ($paths as $file) {
         //unlink($file);
