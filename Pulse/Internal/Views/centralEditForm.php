@@ -97,19 +97,28 @@
             <?php break;
             case 8: 
         // IMAGE UPLOAD ?>
-        <input id="field_<?=$value['name']?>" name="field_<?=$value['name']?>" value="<?=$list[0][$value['name']]?>" type="file" class="form-control file-loading" accept="image/*">
+        <?php
+		// Image thumb
+		if(!empty($list[0][$value['name']])){
+		?>
+		<img src="<?=basePath()?>/Pulse/uploads/<?=$list[0][$value['name']]?>" width="400" style="margin:10px; border-radius:10px;">
+		<?php
+		}
+		?>
+		<input type="hidden" class="form-control" id="field_<?=$value['name']?>" value="<?=$list[0][$value['name']]?>" name="field_<?=$value['name']?>">
+        <input id="field_file_<?=$value['name']?>" name="field_file_<?=$value['name']?>" value="<?=$list[0][$value['name']]?>" type="file" class="form-control file-loading" accept="image/*" onchange="$(#field_<?=$value['name']?>).val(this.value);">
         <script>
-        $("#field_<?=$value['name']?>").fileinput({
+        $("#field_file_<?=$value['name']?>").fileinput({
             uploadUrl: "<?=basePath()?>/Pulse/Internal/upload.php",
             uploadAsync: true,
             allowedFileExtensions: ["jpg", "png", "gif"],
-            maxImageWidth: 200,
-            maxImageHeight: 150,
+            maxImageWidth: 400,
+            maxImageHeight: 350,
             resizePreference: 'height',
             maxFileCount: 1,
         uploadExtraData: function() {
             return {
-                inputname: 'field_<?=$value['name']?>',
+                inputname: 'field_file_<?=$value['name']?>',
                 uploadfolder: '../uploads'
             };
         },
@@ -119,6 +128,7 @@
         }).on('fileuploaded', function(event, data) {
             $('#kv-success-box').append(data.response.link);
             $('#kv-success-modal').modal('show');
+			$('#field_<?=$value['name']?>').val($('#field_file_<?=$value['name']?>').val());
         });
         </script>
         <?php break;
