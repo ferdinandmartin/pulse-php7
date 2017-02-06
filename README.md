@@ -1,5 +1,5 @@
 # adive-php7
-Pulse Framework for PHP7
+Adive Framework for PHP7 www.adive.es
 
 # Adive Framework 1.3.2
 Adive is a PHP 7 Framework based in the concepts of Symfony2, Slim, Codeigniter and Smarty.
