@@ -1,10 +1,10 @@
-# pulse-php7
+# adive-php7
 Pulse Framework for PHP7
 
-# PULSE Framework 1.2.1
-Pulse7 is a PHP 7 Framework based in the concepts of Symfony2, Slim, Codeigniter and Smarty.
+# Adive Framework 1.3.2
+Adive is a PHP 7 Framework based in the concepts of Symfony2, Slim, Codeigniter and Smarty.
 
-This version includes a development toolkit to generate entities, control forms and databases, PULSE is an ambitious project, which aims to turn the "coding" in "design".
+This version includes a development toolkit to generate entities, control forms and databases, Adive is an ambitious project from Schben, which aims to turn the "coding" in "design".
 
 # DevToolkit login
 The path to DevToolkit is in admin/dashboard.
