@@ -2,7 +2,7 @@
 /*
  * This file is part of the Pulse package.
  *
- * (c) Ferdinand Martin <info@pulseframework.com>
+ * (c) Ferdinand Martin & Schben <info@schben.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
